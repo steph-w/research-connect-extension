@@ -13,6 +13,7 @@
 // limitations under the License.
 
 const GOOGLE_ORIGIN = 'https://www.google.com';
+//const PROLIFIC_ORIGIN = 'https://app.prolific.com/researcher/get-started';
 
 // Allows users to open the side panel by clicking on the action toolbar icon
 chrome.sidePanel
