@@ -24,10 +24,10 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (!tab.url) return;
   const url = new URL(tab.url);
   // Enables the side panel on google.com
-  if (url.origin === GOOGLE_ORIGIN || url.pathname === '/sidepanel.html' || url.pathname === '/studies-page.html') {
+  if (url.origin === GOOGLE_ORIGIN) {
     await chrome.sidePanel.setOptions({
       tabId,
-      path: url.pathname,
+      path: 'sidepanel.html',
       enabled: true
     });
   } else {
