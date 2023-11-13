@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Studies Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .checked {
-        color: orange;
-        }
-    </style>
-  </head>
 
-  <body>
-    <input id='openResearcherPageButton' type="submit" value="Researcher Page">
-    <h1>Habit Survey 2</h1>
-    <h2>Ratings for Habit Survey 2</h2>
-    <h3 style="text-align:left">Fairness 
-    <span class="fa fa-star checked"; style="float:right"></span>
-    <span class="fa fa-star checked"; style="float:right"></span>
-    <span class="fa fa-star checked"; style="float:right"></span>
-    <span class="fa fa-star"; style="float:right"></span>
-    <span class="fa fa-star"; style="float:right"></span>
-    </h3>
+<head>
+  <title>Studies Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
 
-    <h2>What people are saying</h2>
-    <p>iguana left a comment 2 hours ago</p>
-    <p>I enjoyed taking this study but it took me much longer than 1 minute! The pay was okay I wish it were higher.</p>
+<body>
+  <input id='openResearcherPageButton' type="submit" value="Researcher Page">
+  <h1>Habit Survey 2</h1>
+  <h2>Ratings for Habit Survey 2</h2>
+
+
+  <div id="fairness-rating" class="star-rating-container">
+    <div class="rating-field">
+      <h3>Fairness </h3>
+    </div>
+    <div class="rating-stars">
+      <fieldset class="rating fairness">
+        <input type="radio" id="fairness-star5" name="fairness" value="5" /><label class="full" for="fairness-star5" title="Awesome - 5 stars"></label>
+        <input type="radio" id="fairness-star4half" name="fairness" value="4 and a half" /><label class="half" for="fairness-star4half" title="Pretty good - 4.5 stars"></label>
+        <input type="radio" id="fairness-star4" name="fairness" value="4" /><label class="full" for="fairness-star4" title="Pretty good - 4 stars"></label>
+        <input type="radio" id="fairness-star3half" name="fairness" value="3 and a half" /><label class="half" for="fairness-star3half" title="Meh - 3.5 stars"></label>
+        <input type="radio" id="fairness-star3" name="fairness" value="3" /><label class="full" for="fairness-star3" title="Meh - 3 stars"></label>
+        <input type="radio" id="fairness-star2half" name="fairness" value="2 and a half" /><label class="half" for="fairness-star2half" title="Kinda bad - 2.5 stars"></label>
+        <input type="radio" id="fairness-star2" name="fairness" value="2" /><label class="full" for="fairness-star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" id="fairness-star1half" name="fairness" value="1 and a half" /><label class="half" for="fairness-star1half" title="Meh - 1.5 stars"></label>
+        <input type="radio" id="fairness-star1" name="fairness" value="1" /><label class="full" for="fairness-star1" title="Sucks big time - 1 star"></label>
+        <input type="radio" id="fairness-starhalf" name="fairness" value="half" /><label class="half" for="fairness-starhalf" title="Sucks big time - 0.5 stars"></label>
+    </fieldset>
     
-    <script src="studies-page.js"></script>
-  </body>
+    </div>
+  </div>
+
+    <div id="communication-rating" class="star-rating-container">
+      <div class="rating-field">
+        <h3>Communication</h3>
+      </div>
+      <div class="rating-stars">
+        <fieldset class="rating communication">
+          <input type="radio" id="communication-star5" name="communication" value="5" /><label class="full" for="communication-star5" title="Awesome - 5 stars"></label>
+          <input type="radio" id="communication-star4half" name="communication" value="4 and a half" /><label class="half" for="communication-star4half" title="Pretty good - 4.5 stars"></label>
+          <input type="radio" id="communication-star4" name="communication" value="4" /><label class="full" for="communication-star4" title="Pretty good - 4 stars"></label>
+          <input type="radio" id="communication-star3half" name="communication" value="3 and a half" /><label class="half" for="communication-star3half" title="Meh - 3.5 stars"></label>
+          <input type="radio" id="communication-star3" name="communication" value="3" /><label class="full" for="communication-star3" title="Meh - 3 stars"></label>
+          <input type="radio" id="communication-star2half" name="communication" value="2 and a half" /><label class="half" for="communication-star2half" title="Kinda bad - 2.5 stars"></label>
+          <input type="radio" id="communication-star2" name="communication" value="2" /><label class="full" for="communication-star2" title="Kinda bad - 2 stars"></label>
+          <input type="radio" id="communication-star1half" name="communication" value="1 and a half" /><label class="half" for="communication-star1half" title="Meh - 1.5 stars"></label>
+          <input type="radio" id="communication-star1" name="communication" value="1" /><label class="full" for="communication-star1" title="Sucks big time - 1 star"></label>
+          <input type="radio" id="communication-starhalf" name="communication" value="half" /><label class="half" for="communication-starhalf" title="Sucks big time - 0.5 stars"></label>
+      </fieldset>
+      
+      
+      </div>
+    </div>
+
+      <div id="pay-rating" class="star-rating-container">
+        <div class="rating-field">
+          <h3>Pay</h3>
+        </div>
+        <div class="rating-stars">
+          <fieldset class="rating pay">
+            <input type="radio" id="pay-star5" name="pay" value="5" /><label class="full" for="pay-star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="pay-star4half" name="pay" value="4 and a half" /><label class="half" for="pay-star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="pay-star4" name="pay" value="4" /><label class="full" for="pay-star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="pay-star3half" name="pay" value="3 and a half" /><label class="half" for="pay-star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="pay-star3" name="pay" value="3" /><label class="full" for="pay-star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="pay-star2half" name="pay" value="2 and a half" /><label class="half" for="pay-star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="pay-star2" name="pay" value="2" /><label class="full" for="pay-star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="pay-star1half" name="pay" value="1 and a half" /><label class="half" for="pay-star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="pay-star1" name="pay" value="1" /><label class="full" for="pay-star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="pay-starhalf" name="pay" value="half" /><label class="half" for="pay-starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+        
+        
+        </div>
+
+      </div>
+
+
+      <h2>What people are saying</h2>
+      <p>iguana left a comment 2 hours ago</p>
+      <p>I enjoyed taking this study but it took me much longer than 1 minute! The pay was okay I wish it were higher.
+      </p>
+
+      <script src="studies-page.js"></script>
+</body>
+
 </html>

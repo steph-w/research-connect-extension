@@ -4,3 +4,4 @@ document.addEventListener('DOMContentLoaded', function () {
         chrome.runtime.sendMessage({ type: 'open_researcher_page' });
     });
 });
+
