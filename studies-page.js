@@ -9,3 +9,4 @@ document.addEventListener('DOMContentLoaded', function () {
         chrome.runtime.sendMessage({ type: 'open_study_review_page' });
     });
 });
+
