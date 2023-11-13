@@ -20,21 +20,35 @@ chrome.sidePanel
   .setPanelBehavior({ openPanelOnActionClick: true })
   .catch((error) => console.error(error));
 
-chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
-  if (!tab.url) return;
-  const url = new URL(tab.url);
-  // Enables the side panel on google.com
-  if (url.origin === GOOGLE_ORIGIN) {
-    await chrome.sidePanel.setOptions({
-      tabId,
-      path: 'sidepanel.html',
-      enabled: true
-    });
-  } else {
-    // Disables the side panel on all other sites
-    await chrome.sidePanel.setOptions({
-      tabId,
-      enabled: false
+// chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
+//   if (!tab.url) return;
+//   const url = new URL(tab.url);
+//   // Enables the side panel on google.com
+//   if (url.origin === GOOGLE_ORIGIN) {
+//     console.log("GOOGLE_ORIGIN SET!!")
+//     await chrome.sidePanel.setOptions({
+//       tabId,
+//       path: 'sidepanel.html',
+//       enabled: true
+//     });
+//   } else {
+//     // Disables the side panel on all other sites
+//     await chrome.sidePanel.setOptions({
+//       tabId,
+//       enabled: false
+//     });
+//   }
+// });
+
+chrome.runtime.onMessage.addListener(async (message, sender) => {
+  if (message.type === 'open_studies_page') {
+    await chrome.sidePanel.setOptions({ 
+      path: 'studies-page.html',
     });
   }
-});
+  if (message.type === 'open_researcher_page') {
+    await chrome.sidePanel.setOptions({ 
+      path: 'sidepanel.html',
+    });
+  }
+})
