@@ -4,11 +4,15 @@ body {
     background-color: #FFECD9;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: Helvetica, sans-serif, "Font Awesome 6 Free";
+
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
+}
 
 input,
 button,
@@ -29,7 +33,9 @@ h6 {
 
 /* Typography */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #482702;
 }
 
