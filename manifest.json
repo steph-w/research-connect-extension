@@ -25,13 +25,5 @@
     "16": "images/icon-16.png",
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
-  },
-  "content_scripts": [
-    {
-      "all_frames": true,
-      "matches": ["https://*/*"],
-      "js": ["chart.min.js","results-chart.js"],
-      "run_at": "document_end"
-    }
-  ]
+  }
 }
