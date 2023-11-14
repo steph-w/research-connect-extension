@@ -1,3 +1,38 @@
+/* Reset */
+
+body {
+    background-color: #FFECD9;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+    color: #482702;
+}
+
 /* Colors */
 
 .orange-bg {
@@ -10,4 +45,34 @@
 
 .peach-bg {
     background: #FFECD9;
+}
+
+/* Navigation Tabs */
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "studies researcher";
+}
+
+.nav-tab {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0;
+}
+
+.studies {
+    grid-area: studies;
+    background-color: #BE700D;
+}
+
+.researcher {
+    grid-area: researcher;
+    background-color: #E27F00;
 }
