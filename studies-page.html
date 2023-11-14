@@ -4,11 +4,20 @@
 <head>
   <title>Studies Page</title>
   <link rel="stylesheet" href="studies-page.css">
+  <link rel="stylesheet" href="main.css">
   <script src="chart.min.js"></script>
 </head>
 
 <body>
-  <input id='openResearcherPageButton' type="submit" value="Researcher Page">
+  <div class="nav-container">
+    <button class="studies nav-tab" id='backToStudiesButton'>
+      Study
+    </button>
+    <button class="researcher nav-tab" id="openResearcherPageButton">
+      Researcher
+    </button>
+
+  </div>
 
   <div class="container">
     <h1>Habit Survey 2</h1>
@@ -20,7 +29,7 @@
 
     <!-- Comments -->
     <div class="comments-container">
-      <h2>What people are saying</h2>
+      <h2>What people are saying about this study</h2>
       <ul id="comments-list" class="comments-list">
         <li>
           <div>
@@ -64,6 +73,13 @@
         </li>
       </ul>
     </div>
+
+    <!-- Leave review -->
+    <svg width="194" height="29" viewBox="0 0 194 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0H180L193.5 14.5L180 29H0L9.5 14.5L0 0Z" fill="#E27F00" />
+    </svg>
+
+
     <input id='studyReviewPageButton' type="submit" value="Leave a Review">
   </div>
 
