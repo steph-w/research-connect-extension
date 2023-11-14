@@ -1,8 +1,13 @@
 // Sample data
-var categories = ['Category A', 'Category B', 'Category C', 'Category D'];
-var agreeValues = [10, 15, 5, 8];
-var neutralValues = [8, 12, 6, 10];
-var disagreeValues = [5, 10, 2, 5];
+
+var categories = [
+    ['The pay was appropriate', 'for the time and effort.'], 
+    ['The communication with', 'the researcher was effective', 'and transparent.'], 
+    ['I experienced no issues', 'or difficulties completing', 'this study']
+    ];
+var agreeValues = [10, 15, 5];
+var neutralValues = [8, 12, 6];
+var disagreeValues = [5, 10, 2];
 
 // Calculate the bottom positions for the neutral and disagree bars
 var neutralBottom = agreeValues.map((value, index) => value + neutralValues[index]);
@@ -20,7 +25,8 @@ var myChart = new Chart(ctx, {
             {
                 label: 'Agree',
                 backgroundColor: 'green',
-                data: agreeValues
+                data: agreeValues,
+                stack: 'stack1'
             },
             {
                 label: 'Neutral',
@@ -40,6 +46,7 @@ var myChart = new Chart(ctx, {
         scales: {
             x: { stacked: true },
             y: { stacked: true }
-        }
+        },
+        indexAxis: 'y'
     }
 });

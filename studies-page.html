@@ -10,17 +10,45 @@
 
 <body>
   <input id='openResearcherPageButton' type="submit" value="Researcher Page">
-  <h1>Habit Survey 2</h1>
-  <h3 style="color:green;">96% of users recommend this study</h3>
-  <h2>Ratings for Habit Survey 2</h2>
 
-  <canvas id="myChart"></canvas>
+  <div class="container">
 
-  <h2>What people are saying</h2>
-  <p>iguana left a comment 2 hours ago</p>
-  <p>I enjoyed taking this study but it took me much longer than 1 minute! The pay was okay I wish it were higher.
-  </p>
-  <input id='studyReviewPageButton' type="submit" value="Leave a Review">
+    <h1>Habit Survey 2</h1>
+    <h3 style="color:green;">96% of users recommend this study</h3>
+    <h2>Ratings for Habit Survey 2</h2>
+
+    <!-- Exit Survey Results -->
+    <canvas id="myChart"></canvas>
+
+    <!-- Comments -->
+    <div class="comments-container">
+      <h2>What people are saying</h2>
+      <ul id="comments-list" class="comments-list">
+        <li>
+          <div>
+            <!-- Comment container -->
+            <div class="comment-box">
+              <div class="comment-head">
+                <h6 class="comment-name">iguana</h6>
+                <span>1 hour ago</span>
+                <!-- TODO: Add reply functionality -->
+                <!-- <i class="fa fa-reply"></i> -->
+              </div>
+              <div class="comment-content">
+                I enjoyed taking this study but it took me much longer than 1 minute! The pay was okay I wish it were
+                higher. </div>
+            </div>
+          </div>
+
+
+        </li>
+
+      </ul>
+    </div>
+
+    <input id='studyReviewPageButton' type="submit" value="Leave a Review">
+  </div>
+
   <script src="results-chart.js"></script>
   <script src="studies-page.js"></script>
 </body>
