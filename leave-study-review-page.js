@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var submitStudyReviewButtonBtn = document.getElementById('submitStudyReviewButton');
-    submitStudyReviewButtonBtn.addEventListener('click', function() {
-        chrome.runtime.sendMessage({ type: 'submit_study_review' });
+    var submitStudyReviewBtn = document.getElementById('submitStudyReviewButton');
+    submitStudyReviewBtn.addEventListener('click', function() {
+        chrome.runtime.sendMessage({ type: 'open_studies_page' });
+    });
+    var backToStudiesBtn = document.getElementById('backToStudiesButton');
+    backToStudiesBtn.addEventListener('click', function() {
+        chrome.runtime.sendMessage({ type: 'open_studies_page' });
     });
 });
