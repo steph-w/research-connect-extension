@@ -32,4 +32,9 @@ chrome.runtime.onMessage.addListener(async (message, sender) => {
       path: 'sidepanel.html',
     });
   }
+  if (message.type === 'open_study_review_page') {
+    await chrome.sidePanel.setOptions({ 
+      path: 'leave-study-review-page.html',
+    });
+  }
 })
