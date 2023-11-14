@@ -1,9 +1,3 @@
-
-analysisResult=`
-<canvas id="myChart"></canvas>`
-
-document.body.insertAdjacentHTML('afterBegin',analysisResult)
-
 // Sample data
 var categories = ['Category A', 'Category B', 'Category C', 'Category D'];
 var agreeValues = [10, 15, 5, 8];
