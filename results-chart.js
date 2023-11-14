@@ -20,7 +20,8 @@ var myChart = new Chart(ctx, {
             {
                 label: 'Agree',
                 backgroundColor: 'green',
-                data: agreeValues
+                data: agreeValues,
+                stack: 'stack1'
             },
             {
                 label: 'Neutral',
@@ -40,6 +41,7 @@ var myChart = new Chart(ctx, {
         scales: {
             x: { stacked: true },
             y: { stacked: true }
-        }
+        },
+        indexAxis: 'y'
     }
 });
