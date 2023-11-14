@@ -16,7 +16,7 @@ var timeLabelsAsDates = timeLabels.map(label => new Date(label));
 var ctx = document.getElementById('myTimeSeriesChart').getContext('2d');
 
 // Create the time series line chart
-var myTimeSeriesChart = new Chart(ctx, {
+var researcherStats = new Chart(ctx, {
     data: {
         labels: timeLabels,
         datasets: [

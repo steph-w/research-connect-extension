@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Google side panel extension</title>
+    <title>Researcher Page</title>
+    <link rel="stylesheet" href="studies-page.css">
+    <link rel="stylesheet" href="main.css">
     <script src="chart.min.js"></script>
   </head>
   <body>
+    <div class=""nav-container">
+      <button class="studies nav-tab" id='openStudiesPageButton'>
+        Study
+      </button>
+      <button class="researcher nav-tab" id="backToResearcherButton">
+        Researcher
+      </button>
+    </div>
 
-    <div id="Researcher Page">
-      <input id='openStudiesPageButton' type="submit" value="Studies Page">
-      <h1>Reviews for Researcher <b></b></h1>
+
+    <div class="container">
+      <!-- <input id='openStudiesPageButton' type="submit" value="Studies Page"> -->
+      <h1>Researcher A</h1>
       <p>Joined August 2018</p>
       <p>7 previous studies</p>
+      <p></p>
       <p><a href="https://scholar.google.com/intl/en/scholar/citations.html" target="_blank">Google Scholar</a></p>
-      <h2>Statistics</h2>
-      <canvas id="myTimeSeriesChart"></canvas>
+      <h2>Researcher A's Study Ratings</h2>
+      <canvas id="researcherStats"></canvas>
     </div>
     <script src="sidepanel.js"></script>
   </body>
