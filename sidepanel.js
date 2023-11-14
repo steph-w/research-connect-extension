@@ -13,7 +13,7 @@ var data = [30, 45, 99, 66, 75];
 var timeLabelsAsDates = timeLabels.map(label => new Date(label));
 
 // Get the canvas element
-var ctx = document.getElementById('myTimeSeriesChart').getContext('2d');
+var ctx = document.getElementById('researcherStats').getContext('2d');
 
 // Create the time series line chart
 var researcherStats = new Chart(ctx, {
