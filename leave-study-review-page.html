@@ -2,49 +2,118 @@
 <html>
   <head>
     <title>Leave a Study Review Page</title>
-    <style>
-        .checked {
-        color: orange;
-        }
-    </style>
+    <link rel="stylesheet" href="studies-page.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <!-- Font Awesome JS -->
+    <script src="chart.min.js"></script>
   </head>
 
   <body>
-    <input id='backToStudiesButton' type="submit" value="Go back">
-    <h1>Habit Survey 2</h1>
-    <p>The pay was appropriate for the time and effort.</p>
-    <div class="likert">
-      <label><input name="time" type="radio" value="1"/><span>Strongly disagree</span></label><br>
-      <label><input name="time" type="radio" value="2"/><span>Disagree</span></label><br>
-      <label><input name="time" type="radio" value="3"/><span>Neither agree nor disagree</span></label><br>
-      <label><input name="time" type="radio" value="4"/><span>Agree</span></label><br>
-      <label><input name="time" type="radio" value="5"/><span>Strongly agree</span></label>
+    <div class="container">
+    <div class="wrap">
+      <h1>Habit Survey 2</h1>
+      <form action="">
+        <label class="statement">The pay was appropriate for the time and effort.</label>
+        <ul class='likert'>
+          <li>
+            <input type="radio" name="time" value="strong_agree">
+            <label>Strongly agree</label>
+          </li>
+          <li>
+            <input type="radio" name="time" value="strong_agree">
+            <label>Agree</label>
+          </li>
+          <li>
+            <input type="radio" name="time" value="strong_agree">
+            <label>Neutral</label>
+          </li>
+          <li>
+            <input type="radio" name="time" value="disagree">
+            <label>Disagree</label>
+          </li>
+          <li>
+            <input type="radio" name="time" value="strong_agree">
+            <label>Strongly disagree</label>
+          </li>
+        </ul>
+        <label class="statement">The communication with the researcher was effective and transparent.</label>
+        <ul class='likert'>
+          <li>
+            <input type="radio" name="comm" value="strong_agree">
+            <label>Strongly agree</label>
+          </li>
+          <li>
+            <input type="radio" name="comm" value="strong_agree">
+            <label>Agree</label>
+          </li>
+          <li>
+            <input type="radio" name="comm" value="strong_agree">
+            <label>Neutral</label>
+          </li>
+          <li>
+            <input type="radio" name="comm" value="disagree">
+            <label>Disagree</label>
+          </li>
+          <li>
+            <input type="radio" name="comm" value="strong_agree">
+            <label>Strongly disagree</label>
+          </li>
+        </ul>
+        <label class="statement">I experienced no issues or difficulties completing this study.</label>
+        <ul class='likert'>
+          <li>
+            <input type="radio" name="issues" value="strong_agree">
+            <label>Strongly agree</label>
+          </li>
+          <li>
+            <input type="radio" name="issues" value="strong_agree">
+            <label>Agree</label>
+          </li>
+          <li>
+            <input type="radio" name="issues" value="strong_agree">
+            <label>Neutral</label>
+          </li>
+          <li>
+            <input type="radio" name="issues" value="disagree">
+            <label>Disagree</label>
+          </li>
+          <li>
+            <input type="radio" name="issues" value="strong_agree">
+            <label>Strongly disagree</label>
+          </li>
+        </ul>
+        <label class="statement">Overall would you recommend this study to others?</label>
+        <ul class='likert'>
+          <li>
+            <input type="radio" name="recc" value="strong_agree">
+            <label>Strongly agree</label>
+          </li>
+          <li>
+            <input type="radio" name="recc" value="strong_agree">
+            <label>Agree</label>
+          </li>
+          <li>
+            <input type="radio" name="recc" value="strong_agree">
+            <label>Neutral</label>
+          </li>
+          <li>
+            <input type="radio" name="recc" value="disagree">
+            <label>Disagree</label>
+          </li>
+          <li>
+            <input type="radio" name="recc" value="strong_agree">
+            <label>Strongly disagree</label>
+          </li>
+        </ul>
+        <label for="review">Review comments</label><br>
+        <textarea id="review" name="review" rows="4" cols="50">
+        </textarea>
+        <br>
+        <input id='submitStudyReviewButton' type="submit" value="Submit Review">
+        <script src="leave-study-review-page.js"></script>
+      </form>
     </div>
-    <p>The communication with the researcher was effective and transparent.</p>
-    <div class="likert">
-      <label><input name="comm" type="radio" value="1"/><span>Strongly disagree</span></label><br>
-      <label><input name="comm" type="radio" value="2"/><span>Disagree</span></label><br>
-      <label><input name="comm" type="radio" value="3"/><span>Neither agree nor disagree</span></label><br>
-      <label><input name="comm" type="radio" value="4"/><span>Agree</span></label><br>
-      <label><input name="comm" type="radio" value="5"/><span>Strongly agree</span></label>
-    </div>
-    <p>I experienced no issues or difficulties completing this study</p>
-    <div class="likert">
-      <label><input name="issues" type="radio" value="1"/><span>Strongly disagree</span></label><br>
-      <label><input name="issues" type="radio" value="2"/><span>Disagree</span></label><br>
-      <label><input name="issues" type="radio" value="3"/><span>Neither agree nor disagree</span></label><br>
-      <label><input name="issues" type="radio" value="4"/><span>Agree</span></label><br>
-      <label><input name="issues" type="radio" value="5"/><span>Strongly agree</span></label>
-    </div>
-    <p>Overall would you recommend this study to others?</p>
-    <div class="likert">
-      <label><input name="recc" type="radio" value="1"/><span>Yes</span></label><br>
-      <label><input name="recc" type="radio" value="2"/><span>No</span></label>
-    </div>
-    <label for="w3review">Review comments</label>
-    <textarea id="w3review" name="w3review" rows="4" cols="50">
-    </textarea>
-    <input id='submitStudyReviewButton' type="submit" value="Submit Review">
-    <script src="leave-study-review-page.js"></script>
   </body>
 </html>
