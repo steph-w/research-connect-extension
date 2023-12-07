@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Results chart
 
+// var categories = [
+//     ['The pay was appropriate', 'for the time and effort.'], 
+//     ['The communication with', 'the researcher was effective', 'and transparent.'], 
+//     ['I experienced no issues', 'or difficulties completing', 'this study']
+//     ];
 var categories = [
-    ['The pay was appropriate', 'for the time and effort.'], 
-    ['The communication with', 'the researcher was effective', 'and transparent.'], 
-    ['I experienced no issues', 'or difficulties completing', 'this study']
-    ];
+    ['Pay was appropriate'],
+    ['Communication was effective'],
+    ['No issues'],
+];
 
 var stronglyAgreeValues = [10, 15, 5];
 var agreeValues = [10, 15, 5];
@@ -43,40 +48,40 @@ var myChart = new Chart(ctx, {
                 label: 'Strongly Agree',
                 backgroundColor: '#2d8653',
                 data: stronglyAgreeValues,
-                stack: 'stack1'
+                // stack: 'stack1'
             },
             {
                 label: 'Agree',
                 backgroundColor: '#53c585',
                 data: agreeValues,
-                stack: 'stack1'
+                // stack: 'stack1'
             },
             {
                 label: 'Neutral',
                 backgroundColor: '#ffddb3',
                 data: neutralValues,
-                stack: 'stack1'
+                // stack: 'stack1'
             },
             {
                 label: 'Disagree',
                 backgroundColor: '#ec785f',
                 data: disagreeValues,
-                stack: 'stack1'
+                // stack: 'stack1'
             },
             {
                 label: 'Strongly Disagree',
                 backgroundColor: '#e54624',
                 data: stronglyDisagreeValues,
-                stack: 'stack1'
+                // stack: 'stack1'
             }
         ]
     },
     options: {
-        scales: {
-            x: { stacked: true },
-            y: { stacked: true }
-        },
-        indexAxis: 'y'
+        // scales: {
+        //     x: { stacked: true },
+        //     y: { stacked: true }
+        // },
+        // indexAxis: 'y'
     }
 });
 
