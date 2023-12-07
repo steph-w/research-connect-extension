@@ -8,7 +8,7 @@
 var categories = [
     ['Pay was appropriate'],
     ['Communication was effective'],
-    ['No issues'],
+    ['Experienced little to no issues'],
 ];
 var agreeValues = [10, 15, 5];
 var neutralValues = [8, 12, 6];
